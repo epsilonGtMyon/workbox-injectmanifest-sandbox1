@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="../../lib/materialize/css/materialize.min.css"
+    />
+      
+    <script src="../../lib/dexie/dexie.min.js" defer></script>
+    <script src="../../lib/materialize/js/materialize.min.js" defer></script>
+
+    <script src="../../common/dbHolder.js" defer></script>
+    <script src="../../common/parameters.js" defer></script>
+
+    <script src="./script.js" defer></script>
+    <title>Detail</title>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper indigo darken-3">
+          <a href="javascript:void(0)" id="navTitle" class="brand-logo"></a>
+        </div>
+      </nav>
+    </div>
+
+    <div id="moneyDetailContainer" class="row"></div>
+        
+    <!-- Modal Structure -->
+    <div id="modal" class="modal detailInput">
+      <div class="modal-content">
+        <header>項目入力</header>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="detailInputTitle" type="text" class="validate">
+            <label for="detailInputTitle">タイトル</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="detailInputAmount" type="text" class="validate">
+            <label for="detailInputAmount">金額</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="detailInputMemo" type="text" class="validate">
+            <label for="detailInputMemo">メモ</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" id="detailInputOk" class="waves-effect waves-green btn-flat"
+          >OK</a
+        >
+        <a href="#" id="detailInputCancel" class="waves-effect waves-green btn-flat"
+          >CANCEL</a
+        >
+      </div>
+    </div>
+    
+
+    <div style="position: fixed; right: 20px; bottom: 20px">
+      <a id="addRecord" class="btn-floating btn-large waves-effect waves-light indigo darken-3"><i class="material-icons">add</i></a>
+    </div>
+          
+    <script>
+      // ここには不要？
+      // window.addEventListener("load", () => {
+      //   //service workerの登録
+      //   if ("serviceWorker" in navigator) {
+      //     navigator.serviceWorker.register("../../sw.js");
+      //   }
+      // });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../../lib/materialize/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./style.css"
+    />
+    <script src="../../lib/dexie/dexie.min.js" defer></script>
+    <script src="../../lib/materialize/js/materialize.min.js" defer></script>
+
+    <script src="../../common/dbHolder.js" defer></script>
+    <script src="../../common/parameters.js" defer></script>
+
+    <script src="./script.js" defer></script>
+    <title>list</title>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper indigo darken-3">
+          <a href="javascript:void(0)" id="navTitle" class="brand-logo"></a>
+        </div>
+      </nav>
+    </div>
+    <div style="display: flex; justify-content: space-between;">
+      <a id="previousMonth" class="waves-effect waves-light btn indigo darken-3"><i class="material-icons left">chevron_left</i>前月</a>
+      <a id="nextMonth" class="waves-effect waves-light btn indigo darken-3"><i class="material-icons right">chevron_right</i>次月</a>
+    </div>
+
+    <table id="monthRecord">
+      <thead>
+        <tr>
+          <th>日付</th>
+          <th>内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alvin</td>
+          <td>Alvin</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <script>
+      
+      // ここには不要？
+      // window.addEventListener("load", () => {
+      //   //service workerの登録
+      //   if ("serviceWorker" in navigator) {
+      //     navigator.serviceWorker.register("../../sw.js");
+      //   }
+      // });
+    </script>
+  </body>
+</html>

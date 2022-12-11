@@ -1,0 +1,16 @@
+{
+  "name": "workbox-injectmanifest-sandbox1",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "serve": "http-server ./docs -o / -a localhost",
+    "gen": "node injectmanifest.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "workbox-build": "^6.5.4",
+    "workbox-cli": "^6.5.4"
+  }
+}

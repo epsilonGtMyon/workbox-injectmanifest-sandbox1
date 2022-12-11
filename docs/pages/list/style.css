@@ -1,0 +1,13 @@
+
+
+.is-sunday, .is-holiday {
+  color: red;
+}
+
+.is-saturday {
+  color: blue;
+}
+
+.is-today {
+  background-color: rgb(200, 255, 200);
+}

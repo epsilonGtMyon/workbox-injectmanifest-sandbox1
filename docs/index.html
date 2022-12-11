@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>workboxのinjectManifestの検証</title>
+  <script src="./common/parameters.js"></script>
+  <!-- マニフェストファイルの読み込み -->
+  <link rel="manifest" href="./manifest.webmanifest" />
+
+  <!-- ogpとtwitter card -->
+  <meta name="og:url" content="https://epsilongtmyon.github.io/workbox-injectmanifest-sandbox1/">
+  <meta name="og:type" content="website">
+  <meta name="og:title" content="workbox-injectmanifest-sandbox1🥳">
+  <meta name="og:image" content="https://epsilongtmyon.github.io/workbox-injectmanifest-sandbox1/images/icon-192x192.png">
+  <meta name="og:description" content="workboxのinjectManifestの検証">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="workbox-injectmanifest-sandbox1🥳">
+  <meta name="twitter:image" content="https://epsilongtmyon.github.io/workbox-injectmanifest-sandbox1/images/icon-192x192.png">
+  <meta name="twitter:description" content="workboxのinjectManifestの検証">
+</head>
+<body>
+  <script>
+    Parameters.removeListBaseDate()
+    window.addEventListener("load", () => {
+      //service workerの登録
+      const isLocal = location.hostname === "localhost";
+      if (isLocal) {
+        navigator.serviceWorker.register("./sw.js");
+      } else {
+        navigator.serviceWorker.register("./sw.js", {
+          scope: "/workbox-injectmanifest-sandbox1/",
+        });
+      }
+    });
+    // location.href="./pages/list/index.html"
+  </script>
+  <a href="./pages/list/index.html">start</a>
+</body>
+</html>
